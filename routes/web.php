@@ -4,6 +4,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\testings;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------

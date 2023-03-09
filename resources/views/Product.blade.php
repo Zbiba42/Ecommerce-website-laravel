@@ -1,43 +1,26 @@
 <x-master>
-    @php
-        // die($product);
-    @endphp
-    <div className="shoeContainer">
-        <div className="imgContainer">
-          <img src="{{ asset('storsdsdage/' . $product->picture)  }}" alt="unavailable" />
+  
+    <div class="shoeContainer">
+        <div class="imgContainer">
+          <img src="{{ asset('storage/' . $product->picture)  }}" alt="unavailable" />
         </div>
-        <div className="infoContainer">
-          <h4 className="Shoecategory">
+        <div class="infoContainer">
+          <h1 class="ShoeName">{{ $product->name }}</h1>
+          <h4 class="Shoecategory">
             {{ $product->Category }}
           </h4>
-          <h1 className="ShoeName">{{ $product->name }}</h1>
-          <h3 className="ShoePrice">{shoeData.price} $</h3>
-          <h4 className="ShoeLeft">Items Left :{shoeData.items_left}</h4>
+          <h4 class="description">{{ $product->description }}</h4>
+          <h3 class="ShoePrice"> {{ $product->price }} $ </h3>
 
-          <h4 className="SelectSize">Select Size</h4>
-          <div className="SizeSelection">
-            <div className="size">
-              <h4>M 10 / W 11.5</h4>
-            </div>
-            <div className="size">
-              <h4>M 10 / W 11.5</h4>
-            </div>
-            <div className="size">
-              <h4>M 10 / W 11.5</h4>
-            </div>
-          </div>
-          <div className="buttonsContainer">
-            <div className="button" onClick={addtoCart}>
+          <div class="buttonsContainer">
+            <div class="button" onClick={addtoCart}>
               <h4>
-                Add to Cart <i className="fa-solid fa-cart-shopping"></i>
+                buy <i class="fa-solid fa-cart-shopping"></i>
               </h4>
+              
             </div>
-
-            <div className="button" onClick={addToFav}>
-              <h4>
-                Favorite <i className="fa-solid fa-heart"></i>
-              </h4>
-            </div>
+              
+              </div>
           </div>
         </div>
       </div>
