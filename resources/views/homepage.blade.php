@@ -7,8 +7,8 @@
         @foreach($products as $product)
             <a href="{{ route('product.product', $product) }}">
                 <div class="box">
-                    <div class="image" style='background:url({{ asset('storage/' . $product->picture)  }})'>
-                    </div> 
+                    <img class="image" src={{ asset('storage/' . $product->picture) }} />
+                     
                     <h4 class="title">{{ $product->name }}</h4>
                         @if(session('user'))
                             <form action="{{ route('cart.add',$product) }}" method="post">

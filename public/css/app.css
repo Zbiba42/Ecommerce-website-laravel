@@ -173,6 +173,7 @@ input[type="file"] {
     height:70%;
     background-size: contain;
     background-repeat: no-repeat;
+    object-fit:scale-down;
 }
 .title{
     margin-top: 10px;
